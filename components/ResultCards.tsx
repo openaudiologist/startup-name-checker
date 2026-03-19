@@ -100,19 +100,20 @@ export default function ResultCards({
       </CardHeader>
       <CardContent className="space-y-2">
         {domains.map((domain) => (
-          <div key={domain} className="flex items-center justify-between">
-            <a
-              href={`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
+          <a
+            key={domain}
+            href={`https://www.godaddy.com/domainsearch/find?domainToCheck=${domain}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between hover:text-primary transition-colors"
+          >
+            <span className="text-sm text-foreground">
               {domain}
-            </a>
+            </span>
             <Badge variant="outline" className="text-xs">
               Check →
             </Badge>
-          </div>
+          </a>
         ))}
       </CardContent>
     </Card>,

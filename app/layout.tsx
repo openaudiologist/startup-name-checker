@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+
+const GA_ID = "G-JVYL6KZV9Z";
 
 export const metadata: Metadata = {
   title: "Startup Name Checker — Free AI Tool",
@@ -17,6 +20,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn("dark", GeistSans.variable, GeistMono.variable)}>
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className="font-sans antialiased">
         {children}
       </body>

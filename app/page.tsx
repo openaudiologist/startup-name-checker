@@ -94,7 +94,7 @@ export default function Home() {
             name={name}
             onAlternativeClick={checkName}
           />
-          <AffiliateCards />
+          {/* <AffiliateCards /> */}
         </>
       )}
     </main>
