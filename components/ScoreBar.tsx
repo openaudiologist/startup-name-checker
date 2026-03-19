@@ -18,9 +18,9 @@ export default function ScoreBar({ label, value }: ScoreBarProps) {
 
   const colorClass =
     value >= 75
-      ? "bg-green-500"
+      ? "bg-[hsl(var(--success))]"
       : value >= 50
-        ? "bg-primary"
+        ? "bg-[hsl(var(--warning))]"
         : "bg-destructive";
 
   return (

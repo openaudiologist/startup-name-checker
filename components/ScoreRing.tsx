@@ -12,10 +12,10 @@ export default function ScoreRing({ score }: ScoreRingProps) {
 
   const strokeColor =
     score >= 75
-      ? "hsl(142, 76%, 56%)"
+      ? "hsl(var(--success))"
       : score >= 50
-        ? "hsl(45, 100%, 52%)"
-        : "hsl(0, 84%, 60%)";
+        ? "hsl(var(--warning))"
+        : "hsl(var(--destructive))";
 
   useEffect(() => {
     const timer = setTimeout(() => {

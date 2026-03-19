@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Mono, Geist } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const dmMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-});
 
 export const metadata: Metadata = {
   title: "Startup Name Checker — Free AI Tool",
@@ -23,10 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
-      <body
-        className={`${geist.variable} ${dmMono.variable} font-sans antialiased`}
-      >
+    <html lang="en" className={cn("dark", GeistSans.variable, GeistMono.variable)}>
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

@@ -163,7 +163,7 @@ export default function ResultCards({
       <CardContent>
         <div className="space-y-2 mb-3">
           {result.strengths.map((s, i) => (
-            <p key={i} className="text-sm text-green-500">
+            <p key={i} className="text-sm text-[hsl(var(--success))]">
               ↑ {s}
             </p>
           ))}

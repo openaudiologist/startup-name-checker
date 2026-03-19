@@ -14,7 +14,7 @@ const affiliates = [
     headline: "Build your website",
     sub: "Launch fast with Hostinger",
     href: "https://www.hostinger.com",
-    ctaColor: "text-green-500",
+    ctaColor: "text-[hsl(var(--success))]",
     cta: "Start Building →",
   },
   {
@@ -22,7 +22,7 @@ const affiliates = [
     headline: "Start your company",
     sub: "Register in India",
     href: "https://rize.razorpay.com",
-    ctaColor: "text-blue-500",
+    ctaColor: "text-primary",
     cta: "Incorporate →",
   },
 ];
