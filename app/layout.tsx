@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("dark", GeistSans.variable, GeistMono.variable)}>
       <head>
+        <meta name="impact-site-verification" content="ebd0432a-78f7-43bc-972e-6645f5b23481" />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
